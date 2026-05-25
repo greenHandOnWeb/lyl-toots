@@ -75,7 +75,7 @@ export function buildHighlightHtml(jsonStr) {
     /("(?:\\.|[^"\\])*")(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d+)?(?:[eE][+-]?\d+)?/g,
     (match, _q, colon) => {
       if (colon !== undefined) {
-        return `<span style="color:#2979ff;font-weight:600">${match}</span>`
+        return `<span style="color:#047857;font-weight:600">${match}</span>`
       }
       if (/^"/.test(match)) {
         return `<span style="color:#19be6b">${match}</span>`

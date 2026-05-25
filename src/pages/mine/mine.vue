@@ -1,16 +1,18 @@
 <template>
   <view class="page">
-    <view class="profile-card">
-      <view class="avatar">🧑‍💻</view>
-      <text class="nickname">极客开发者</text>
-      <text class="subtitle">前端极客工具箱 v1.0.0</text>
+    <view class="profile">
+      <text class="avatar">🧑‍💻</text>
+      <text class="name">极客开发者</text>
+      <text class="ver">v1.0.0</text>
     </view>
 
-    <uv-cell-group :border="true">
-      <uv-cell title="关于应用" :value="'uni-app + Vue3'" is-link @click="showAbout" />
-      <uv-cell title="技术栈" value="uv-ui / Vite / rpx" />
-      <uv-cell title="支持平台" value="H5 / iOS / Android" />
-    </uv-cell-group>
+    <view class="list-card">
+      <uv-cell-group :border="false">
+        <uv-cell title="关于应用" :value="'uni-app + Vue3'" is-link @click="showAbout" />
+        <uv-cell title="技术栈" value="uv-ui / Vite / rpx" />
+        <uv-cell title="支持平台" value="H5 / iOS / Android" />
+      </uv-cell-group>
+    </view>
   </view>
 </template>
 
@@ -26,35 +28,43 @@ function showAbout() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/uni.scss';
+
 .page {
   min-height: 100vh;
   padding: 24rpx;
+  background: $bg-color;
 }
 
-.profile-card {
-  background: linear-gradient(135deg, #2979ff, #5cadff);
-  border-radius: 16rpx;
-  padding: 48rpx 32rpx;
-  margin-bottom: 32rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.profile {
+  padding: 48rpx 0 40rpx;
+  text-align: center;
 }
 
 .avatar {
-  font-size: 96rpx;
-  margin-bottom: 16rpx;
+  font-size: 80rpx;
+  display: block;
 }
 
-.nickname {
-  font-size: 36rpx;
-  font-weight: 600;
-  color: #fff;
-  margin-bottom: 8rpx;
+.name {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: $text-color;
+  margin-top: 16rpx;
+  display: block;
 }
 
-.subtitle {
+.ver {
   font-size: 24rpx;
-  color: rgba(255, 255, 255, 0.85);
+  color: $text-tertiary;
+  margin-top: 8rpx;
+  display: block;
+}
+
+.list-card {
+  background: $surface-color;
+  border-radius: 16rpx;
+  border: 1rpx solid $border-color;
+  overflow: hidden;
 }
 </style>

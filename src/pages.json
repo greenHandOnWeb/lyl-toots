@@ -10,52 +10,52 @@
       "path": "pages/index/index",
       "style": {
         "navigationBarTitleText": "工具箱",
-        "navigationBarBackgroundColor": "#2979ff",
-        "navigationBarTextStyle": "white"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
       }
     },
     {
       "path": "pages/mine/mine",
       "style": {
         "navigationBarTitleText": "我的",
-        "navigationBarBackgroundColor": "#2979ff",
-        "navigationBarTextStyle": "white"
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black"
       }
     },
     {
       "path": "pages/tool/detail",
       "style": {
         "navigationBarTitleText": "工具详情",
-        "navigationBarBackgroundColor": "#2979ff",
-        "navigationBarTextStyle": "white",
+        "navigationBarBackgroundColor": "#ffffff",
+        "navigationBarTextStyle": "black",
         "navigationStyle": "default"
       }
     }
   ],
   "globalStyle": {
-    "navigationBarTextStyle": "white",
+    "navigationBarTextStyle": "black",
     "navigationBarTitleText": "前端极客工具箱",
-    "navigationBarBackgroundColor": "#2979ff",
-    "backgroundColor": "#f5f6f8",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#ecfdf5",
     "backgroundTextStyle": "dark",
     "app-plus": {
       "titleNView": {
-        "backgroundColor": "#2979ff",
-        "titleColor": "#ffffff",
+        "backgroundColor": "#ffffff",
+        "titleColor": "#0f172a",
         "buttons": []
       }
     },
     "h5": {
       "titleNView": {
-        "backgroundColor": "#2979ff",
-        "titleColor": "#ffffff"
+        "backgroundColor": "#ffffff",
+        "titleColor": "#0f172a"
       }
     }
   },
   "tabBar": {
-    "color": "#999999",
-    "selectedColor": "#2979ff",
-    "borderStyle": "black",
+    "color": "#64748b",
+    "selectedColor": "#059669",
+    "borderStyle": "white",
     "backgroundColor": "#ffffff",
     "list": [
       {

@@ -14,12 +14,13 @@
     "check:uni": "node -e \"require.resolve('@dcloudio/vite-plugin-uni/bin/uni.js');console.log('uni CLI 已就绪')\""
   },
   "dependencies": {
+    "@climblee/uv-ui": "^1.1.20",
     "@dcloudio/uni-app": "3.0.0-alpha-5010120260519001",
     "@dcloudio/uni-app-plus": "3.0.0-alpha-5010120260519001",
     "@dcloudio/uni-components": "3.0.0-alpha-5010120260519001",
     "@dcloudio/uni-h5": "3.0.0-alpha-5010120260519001",
     "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5010120260519001",
-    "@climblee/uv-ui": "^1.1.20",
+    "jszip": "^3.10.1",
     "vue": "^3.4.21",
     "vue-i18n": "^9.1.9"
   },

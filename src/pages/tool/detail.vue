@@ -44,10 +44,13 @@ function goHome() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/uni.scss';
+
 .detail-page {
   min-height: 100vh;
   padding: 24rpx;
   box-sizing: border-box;
+  background: $bg-color;
 }
 
 .error-wrap {

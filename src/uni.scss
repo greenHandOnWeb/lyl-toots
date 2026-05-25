@@ -1,4 +1,18 @@
-/* 全局 SCSS 变量，可在各页面通过 @import 使用 */
-$primary-color: #2979ff;
-$text-color: #333333;
-$bg-color: #f5f6f8;
+@import '@/styles/palette.scss';
+
+/* 全局语义变量 → 引用 Tailwind 色板 */
+$primary-color: $palette-primary;
+$primary-hover: $palette-primary-hover;
+$primary-soft: $palette-primary-soft;
+$text-color: $palette-text;
+$text-secondary: $palette-text-secondary;
+$text-tertiary: $palette-text-tertiary;
+$bg-color: $palette-bg;
+$surface-color: $palette-surface;
+$surface-muted: $palette-surface-muted;
+$border-color: $palette-border;
+$border-strong: $palette-border-strong;
+$track-color: $palette-track;
+$success-color: $palette-success;
+$success-soft: $palette-success-soft;
+$danger-color: $palette-danger;

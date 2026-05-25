@@ -1,0 +1,30 @@
+@import '@/styles/palette.scss';
+
+$ic-bg: $palette-bg;
+$ic-surface: $palette-surface;
+$ic-surface-muted: $palette-surface-muted;
+$ic-border: $palette-border;
+$ic-border-accent: $palette-border-accent;
+$ic-text: $palette-text;
+$ic-text-secondary: $palette-text-secondary;
+$ic-text-tertiary: $palette-text-tertiary;
+$ic-accent: $palette-primary;
+$ic-accent-soft: $palette-primary-soft;
+$ic-success: $palette-success;
+$ic-success-soft: $palette-success-soft;
+$ic-danger: $palette-danger;
+$ic-track: $palette-track;
+$ic-radius: 16rpx;
+$ic-radius-sm: 12rpx;
+
+@mixin ic-card {
+  background: $ic-surface;
+  border-radius: $ic-radius;
+  border: 1rpx solid $ic-border;
+}
+
+@mixin ic-section-title {
+  font-size: 24rpx;
+  font-weight: 600;
+  color: $ic-text-secondary;
+}

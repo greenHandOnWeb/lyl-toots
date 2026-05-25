@@ -8,6 +8,7 @@
         :show-action="false"
         shape="round"
         bg-color="#ffffff"
+        border-color="#cbd5e1"
         @change="onSearchChange"
         @clear="onSearchChange"
       />
@@ -112,10 +113,13 @@ function shareOnApp() {
 </script>
 
 <style lang="scss" scoped>
+@import '@/uni.scss';
+
 .page {
   min-height: 100vh;
   padding: 24rpx;
   box-sizing: border-box;
+  background: $bg-color;
 }
 
 .search-wrap {
@@ -123,9 +127,10 @@ function shareOnApp() {
 }
 
 .grid-wrap {
-  background: #ffffff;
+  background: $surface-color;
   border-radius: 16rpx;
   padding: 16rpx 0;
+  border: 1rpx solid $border-color;
 }
 
 .tool-card {
@@ -143,19 +148,19 @@ function shareOnApp() {
 .tool-name {
   font-size: 30rpx;
   font-weight: 600;
-  color: #333;
+  color: $text-color;
   margin-bottom: 8rpx;
 }
 
 .tool-desc {
   font-size: 24rpx;
-  color: #999;
+  color: $text-tertiary;
 }
 
 .empty-tip {
   text-align: center;
   padding: 48rpx;
-  color: #999;
+  color: $text-tertiary;
   font-size: 28rpx;
 }
 

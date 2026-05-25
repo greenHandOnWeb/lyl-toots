@@ -68,7 +68,7 @@ async function onRoll() {
   font-size: 32rpx;
   font-weight: 700;
   color: #fff;
-  background: linear-gradient(145deg, #2979ff, #5cadff);
+  background: linear-gradient(145deg, #059669, #34d399);
   border: 2rpx solid rgba(255, 255, 255, 0.3);
   border-radius: 16rpx;
   backface-visibility: hidden;
@@ -97,7 +97,7 @@ async function onRoll() {
 .result-text {
   font-size: 48rpx;
   font-weight: 700;
-  color: #2979ff;
+  color: #059669;
   text-align: center;
   min-height: 64rpx;
 }

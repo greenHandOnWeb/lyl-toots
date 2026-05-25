@@ -1,0 +1,43 @@
+{
+  "name": "前端极客工具箱",
+  "appid": "__UNI__LYLTOOLS",
+  "description": "图片压缩、JSON 格式化、随机转盘、灵感骰子",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
+    },
+    "modules": {},
+    "distribute": {
+      "android": {
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.READ_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>"
+        ]
+      },
+      "ios": {
+        "privacyDescription": {
+          "NSPhotoLibraryUsageDescription": "需要访问相册以选择并压缩图片",
+          "NSPhotoLibraryAddUsageDescription": "需要保存压缩后的图片到相册",
+          "NSCameraUsageDescription": "需要访问相机以拍摄图片"
+        }
+      }
+    }
+  },
+  "h5": {
+    "title": "前端极客工具箱",
+    "router": {
+      "mode": "hash"
+    }
+  },
+  "vueVersion": "3"
+}

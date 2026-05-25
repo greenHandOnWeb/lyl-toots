@@ -1,0 +1,75 @@
+{
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^uv-(.*)": "@climblee/uv-ui/components/uv-$1/uv-$1.vue"
+    }
+  },
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "工具箱",
+        "navigationBarBackgroundColor": "#2979ff",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/mine/mine",
+      "style": {
+        "navigationBarTitleText": "我的",
+        "navigationBarBackgroundColor": "#2979ff",
+        "navigationBarTextStyle": "white"
+      }
+    },
+    {
+      "path": "pages/tool/detail",
+      "style": {
+        "navigationBarTitleText": "工具详情",
+        "navigationBarBackgroundColor": "#2979ff",
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "default"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "前端极客工具箱",
+    "navigationBarBackgroundColor": "#2979ff",
+    "backgroundColor": "#f5f6f8",
+    "backgroundTextStyle": "dark",
+    "app-plus": {
+      "titleNView": {
+        "backgroundColor": "#2979ff",
+        "titleColor": "#ffffff",
+        "buttons": []
+      }
+    },
+    "h5": {
+      "titleNView": {
+        "backgroundColor": "#2979ff",
+        "titleColor": "#ffffff"
+      }
+    }
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#2979ff",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tab/home.png",
+        "selectedIconPath": "static/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "static/tab/mine.png",
+        "selectedIconPath": "static/tab/mine-active.png"
+      }
+    ]
+  }
+}

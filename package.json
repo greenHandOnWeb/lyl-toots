@@ -1,0 +1,39 @@
+{
+  "name": "lyl-tools",
+  "version": "1.0.0",
+  "description": "前端极客工具箱 - uni-app 跨端应用",
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "dev:h5": "uni",
+    "dev:mp-weixin": "uni -p mp-weixin",
+    "dev:app": "uni -p app",
+    "build:h5": "uni build",
+    "build:mp-weixin": "uni build -p mp-weixin",
+    "build:app": "uni build -p app",
+    "sync:uni": "pnpm dlx @dcloudio/uvm@latest alpha",
+    "check:uni": "node -e \"require.resolve('@dcloudio/vite-plugin-uni/bin/uni.js');console.log('uni CLI 已就绪')\""
+  },
+  "dependencies": {
+    "@dcloudio/uni-app": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-app-plus": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-components": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-h5": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-mp-weixin": "3.0.0-alpha-5010120260519001",
+    "@climblee/uv-ui": "^1.1.20",
+    "vue": "^3.4.21",
+    "vue-i18n": "^9.1.9"
+  },
+  "devDependencies": {
+    "@dcloudio/types": "^3.4.8",
+    "@dcloudio/uni-automator": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-cli-shared": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/uni-stacktracey": "3.0.0-alpha-5010120260519001",
+    "@dcloudio/vite-plugin-uni": "3.0.0-alpha-5010120260519001",
+    "@vue/runtime-core": "^3.4.21",
+    "sass": "^1.77.0",
+    "vite": "5.2.8"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

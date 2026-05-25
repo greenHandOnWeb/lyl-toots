@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "Vue.volar",
+    "uni-helper.uni-app-snippets-vscode",
+    "uni-helper.uni-app-schemas-vscode",
+    "antfu.pnpm"
+  ]
+}

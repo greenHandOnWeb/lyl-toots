@@ -1,0 +1,55 @@
+【角色设定】
+你是一位拥有10年经验的资深跨端架构师，精通 uni-app（Vue3 组合式 API）生态，以及 H5、iOS、Android 多端兼容开发。
+【项目背景】
+我正在开发一个“前端极客工具箱”应用，要求一套代码同时打包成 H5 网页和 iOS/Android 原生 App。该应用集成了图片压缩、JSON 格式化、随机决策转盘、AI 灵感骰子四个核心工具。
+【技术栈与开发规范】
+核心框架：uni-app + Vue 3 (严格使用 <script setup> 组合式 API)。
+UI 组件库：uv-ui（请确保代码中使用其标准组件，如 uv-button, uv-input 等）。
+构建工具：Vite。
+样式适配：全面使用 rpx 单位，实现不同宽度手机屏幕的自动适配。
+代码规范：
+严格遵循 uni-app 最佳实践，处理平台差异时必须使用 #ifdef / #endif 条件编译。
+路由跳转统一使用 uni.navigateTo 等 uni-app 官方 API。
+代码需具备清晰、规范的中文注释。
+【具体任务】
+请帮我生成这个跨端项目的完整基础骨架代码，具体要求如下：
+1. 项目初始化与全局配置
+展示标准的 uni-app 目录结构（包含 pages, static, uni_modules 等）。
+提供一份完整的 pages.json 代码：
+配置底部 TabBar，包含“首页”（工具列表）、“我的”两个页面。
+配置全局导航栏样式，使其在 H5 和 App 端保持视觉一致。
+在 App.vue 的 onLaunch 中，写一段逻辑：仅在 App 端（#ifdef APP-PLUS）检查并请求必要的系统权限（如相册权限）。
+2. 首页开发 (pages/index/index.vue)
+顶部放置一个 uv-ui 的搜索框组件，支持实时过滤工具。
+下方使用 uv-grid 宫格组件展示4个工具卡片（图片压缩、JSON 格式化、随机转盘、灵感骰子）。
+点击卡片通过 uni.navigateTo 携带工具 ID 跳转到统一的工具详情页 /pages/tool/detail。
+条件编译演示：在首页写一个代码示例，展示 <!-- #ifdef H5 -->（显示网页版分享按钮）和 <!-- #ifdef APP-PLUS -->（调用 uni.share 原生分享接口）的差异。
+3. 统一工具详情页模板 (pages/tool/detail.vue)
+页面包含顶部导航栏（带返回按钮）。
+使用 <component :is="currentToolComponent" /> 动态渲染不同的工具组件。
+在 onLoad 中接收首页传来的工具 ID，并根据 ID 动态加载对应的工具组件。
+4. 核心工具组件开发 (components/tools/)
+请在 components/tools/ 目录下分别创建以下4个 .vue 组件，并实现基础交互逻辑：
+图片压缩组件 (ImageCompress.vue)：
+包含一个“选择图片”按钮（使用 uni.chooseImage）和一个图片预览区域。
+提供一个质量滑块（0-100）。
+点击“开始压缩”后，利用 Canvas 在前端进行图片压缩，并展示压缩前后的体积对比。
+跨端注意：请在注释中说明 H5 端使用 Canvas 压缩，App 端可调用 uni.compressImage 或统一走 Canvas 方案。
+JSON 格式化组件 (JsonFormatter.vue)：
+包含一个 uv-textarea 多行文本输入框和一个代码展示区。
+底部放置“格式化”、“压缩”、“复制”三个按钮。
+输入 JSON 字符串后，点击格式化能在下方展示区高亮显示（可用不同颜色区分 key 和 value）。
+如果输入的 JSON 格式有误，使用 uni.showToast 提示错误信息。
+随机决策转盘组件 (LuckyWheel.vue)：
+使用 Canvas 绘制一个包含 6 个扇区的转盘，每个扇区填入默认奖项（如“吃火锅”、“喝奶茶”等）。
+中间放置一个“开始抽奖”按钮。
+点击按钮后，转盘开始旋转（使用 CSS transform: rotate 配合 transition 实现加速后减速的动画效果），随机停止在某个扇区。
+停止后通过 uni.showModal 弹窗告知用户抽中的结果。
+AI 灵感骰子组件 (InspirationDice.vue)：
+页面中心放置一个 3D 立方体骰子（使用 CSS 3D transform 实现）。
+骰子的 6 个面分别写上不同的创意关键词（如“科幻”、“复古”、“极简”等）。
+底部放置一个“投掷灵感”按钮。
+点击按钮后，骰子触发随机旋转动画（X轴和Y轴随机旋转多圈），最终随机停留在某一个面。
+在骰子下方用大号字体展示当前投掷出的关键词结果。
+【输出要求】
+请分步骤输出代码：先输出目录结构和 pages.json 配置，再输出 App.vue 和首页代码，最后依次输出4个核心工具组件的完整代码。确保所有代码可以直接复制并在 HBuilderX 中运行，不要省略关键的导入语句和条件编译注释。

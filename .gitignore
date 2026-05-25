@@ -1,0 +1,14 @@
+node_modules/
+dist/
+unpackage/
+.DS_Store
+*.log
+.idea/
+*.local
+
+# 不使用 npm 锁文件
+package-lock.json
+npm-shrinkwrap.json
+
+# 可选：若不想提交 VS Code 个人配置，可取消下一行注释
+# .vscode/

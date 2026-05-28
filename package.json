@@ -5,6 +5,7 @@
   "packageManager": "pnpm@9.15.9",
   "scripts": {
     "dev:h5": "uni",
+    "dev:proxy": "node server/price-proxy.mjs",
     "dev:mp-weixin": "uni -p mp-weixin",
     "dev:app": "uni -p app",
     "build:h5": "uni build",

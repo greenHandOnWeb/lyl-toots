@@ -13,6 +13,8 @@ import luckyWheelManifest from './lucky-wheel/manifest'
 import LuckyWheelEntry from './lucky-wheel/index.vue'
 import inspirationDiceManifest from './inspiration-dice/manifest'
 import InspirationDiceEntry from './inspiration-dice/index.vue'
+import cheapPriceManifest from './cheap-price/manifest'
+import CheapPriceEntry from './cheap-price/index.vue'
 
 /** manifest + 入口组件（解耦循环依赖） */
 const TOOL_ENTRIES = [
@@ -20,6 +22,7 @@ const TOOL_ENTRIES = [
   [jsonFormatterManifest, JsonFormatterEntry],
   [luckyWheelManifest, LuckyWheelEntry],
   [inspirationDiceManifest, InspirationDiceEntry],
+  [cheapPriceManifest, CheapPriceEntry],
 ]
 
 /** @type {import('./core/types').ToolManifest[]} */

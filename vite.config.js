@@ -7,6 +7,14 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 export default defineConfig({
   plugins: [uni()],
+  server: {
+    proxy: {
+      '/api/price': {
+        target: process.env.PRICE_PROXY_URL || 'http://127.0.0.1:8787',
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
